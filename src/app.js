@@ -4,7 +4,9 @@ import { errorHandler } from './middlewares/errorHandler.middleware.js';
 import morganMiddleware from './middlewares/morgan.middleware.js';
 import { notFoundHandler } from './middlewares/notFound.middleware.js';
 
+import homeRoutes from './routes/home.routes.js';
 import healthRoutes from './routes/health.routes.js';
+import adminRoutes from './routes/admin/index.js';
 
 export default function initializeExpressApp() {
 	const app = express();
@@ -29,7 +31,10 @@ export default function initializeExpressApp() {
 	app.use('/health', healthRoutes);
 
 	// Home Routes
-	app.use('/', (req, res) => res.render('home'));
+	app.use(homeRoutes);
+	
+	// Admin Routes
+	app.use('/admin', adminRoutes);
 
 	// Not Found Middleware
 	app.use(notFoundHandler);

@@ -1,0 +1,35 @@
+{
+	"name": "2nd-assessment",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "npx nodemon main.js",
+		"start": "node main.js",
+		"format": "prettier --check \"**/*.{js,jsx}\"",
+		"format:fix": "prettier --write \"**/*.{js,jsx}\"",
+		"lint": "eslint --ext .js ",
+		"lint:fix": "eslint --fix --ext .js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"devDependencies": {
+		"@eslint/js": "^9.39.2",
+		"eslint": "^9.39.2",
+		"globals": "^17.0.0",
+		"prettier": "^3.7.4"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.3",
+		"ejs": "^3.1.10",
+		"express": "^5.2.1",
+		"http-status-codes": "^2.3.0",
+		"joi": "^18.0.2",
+		"mongoose": "^9.1.2",
+		"morgan": "^1.10.1",
+		"winston": "^3.19.0"
+	}
+}
